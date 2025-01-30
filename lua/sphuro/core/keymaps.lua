@@ -29,8 +29,8 @@ keymap.set("x", "<leader>p", '"_dP')
 
 -- make the current file executable
 keymap.set("n", "<leader>xb", "<cmd>!chmod +x %<CR>", { desc = "Make the current file executable" })
-keymap.set("n", "<leader>xu", "<cmd>!g++ % -o %:r && ./%:r<CR>", { desc = "Compile and Run C++" })
-keymap.set("n", "<leader>xc", "<cmd>!gcc % -o %:r && ./%:r<CR>", { desc = "Compile and Run C" })
+keymap.set("n", "<leader>xu", "<cmd>!g++ % -o %:r<CR>", { desc = "Compile and Run C++" })
+keymap.set("n", "<leader>xc", "<cmd>!gcc % -o %:r<CR>", { desc = "Compile and Run C" })
 keymap.set("n", "<leader>rp", "<cmd>!python3 %<CR>", { desc = "Run Python Script" })
 
 -- use jk or kj to exit insert mode
