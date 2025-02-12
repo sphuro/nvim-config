@@ -28,10 +28,11 @@ keymap.set("n", "N", "Nzzzv") -- previous
 keymap.set("x", "<leader>p", '"_dP')
 
 -- make the current file executable
-keymap.set("n", "<leader>xb", "<cmd>!chmod +x %<CR>", { desc = "Make the current file executable" })
-keymap.set("n", "<leader>xu", "<cmd>!g++ % -o %:r<CR>", { desc = "Compile and Run C++" })
-keymap.set("n", "<leader>xc", "<cmd>!gcc % -o %:r<CR>", { desc = "Compile and Run C" })
-keymap.set("n", "<leader>rp", "<cmd>!python3 %<CR>", { desc = "Run Python Script" })
+
+vim.keymap.set("n", "<leader>xb", ":vsplit | terminal chmod +x %<CR>", { desc = "Make the current file executable" })
+vim.keymap.set("n", "<leader>xu", ":vsplit | terminal g++ % -o %:r && ./%:r<CR>", { desc = "Compile and Run C++" })
+vim.keymap.set("n", "<leader>xc", ":vsplit | terminal gcc % -o %:r && ./%:r<CR>", { desc = "Compile and Run C" })
+vim.keymap.set("n", "<leader>rp", ":vsplit | terminal python3 %<CR>", { desc = "Run Python Script" })
 
 -- use jk or kj to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
@@ -87,6 +88,12 @@ keymap.set("n", "<leader><S-u>", vim.cmd.UndotreeToggle)
 -- oil
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+-- exit terminal
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("t", "jk", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+--enter terminal
+vim.keymap.set("n", "<leader>te", ":vsplit | terminal<CR>", { desc = "Exit terminal mode" })
 -------------------------- COMPETITEST ----------------------------------
 
 local function map(mode, lhs, rhs, opts)
