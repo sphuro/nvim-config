@@ -6,13 +6,7 @@
 ![scr2](scr/2025-02-12_22-47-16.png)
 ![scr2](scr/2025-02-12_22-47-23.png)
 
-## keybindings Configuration
-
-This repository contains custom keybindings for Neovim, enhancing usability and workflow efficiency.
-
-### Installation
-
-To use this configuration, add the keybindings to your Neovim configuration file (e.g., `init.lua` or a separate Lua file in `~/.config/nvim/lua/`).
+## Keybindings Configuration
 
 ### Keybindings
 
